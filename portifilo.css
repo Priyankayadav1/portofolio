@@ -1,0 +1,1549 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(236, 115, 78,0.6);
+    position: fixed;
+    width: 100vw;
+    height: 60px;
+    z-index: 100;
+}
+.burger .fa-bars{
+    position: relative;
+    font-size: 50px;
+    z-index: 100;
+    display: none;
+}
+#logo{
+    position: relative;
+    top: 350px;
+    margin-left: 500px;
+    font-size: 100px;
+    text-transform: capitalize;
+    user-select: none;
+    font-family: 'Akaya Telivigala', cursive;
+}
+#logo h4{
+    font-size: 30px;
+    position: relative;
+    left: 200px;
+    color: red;
+}
+#menu{
+    position: fixed;
+    right: 30px;
+    top: 30px;
+    cursor: pointer;
+    display: flex;
+}
+#menu a{
+    position: relative;
+    padding: 0px 10px;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Inconsolata', monospace;
+    color: black;
+}
+#menu a::before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -10px;
+    left: 0;
+    transition-duration: 1s;
+    background-color: red;
+    box-shadow: 0px 0px 10px red,
+    0px 0px 20px red,
+    0px 0px 30px red,
+    0px 0px 40px red,
+    0px 0px 60px red,
+    0px 0px 80px red,
+    0px 0px 100px red;
+}
+#menu a:hover::before{
+    width: 100%;
+}
+.social-icons{
+    position: fixed;
+    left: 5px;
+    top: 350px;
+    text-align: center;
+    z-index: 100;
+}
+.social-icons i{
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.name1,.name2,.name3{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+    top: -10px;
+    left: 47px;
+    text-align: center;
+}
+.name1{
+    position: relative;
+    background-color: rgb(31, 31, 245);
+    border-radius: 12px;
+    width: 120px;
+    height: 25px; 
+    display: none;  
+}
+.name2{
+    position: relative;
+    background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+    border-radius: 12px;
+    width: 120px;
+    height: 25px;  
+    display: none; 
+}
+.name3{
+    position: relative;
+    background-color: rgb(31, 31, 245);
+    border-radius: 12px;
+    width: 120px;
+    height: 25px; 
+    display: none;  
+}
+.social-icons .fa-facebook:hover{
+    background-color:rgb(31, 31, 245) ;  
+    margin-bottom: -22px;
+    transform: scale(1.2);
+}
+.social-icons .fa-facebook:hover + .name1{
+    display: flex;
+}
+.social-icons .fa-instagram:hover{
+    background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+    margin-bottom: -22px;
+    transform: scale(1.2);
+}
+.social-icons .fa-instagram:hover + .name2{
+    display: flex;
+}
+.social-icons .fa-twitter:hover{
+    background: whitesmoke;
+    color:rgb(31, 31, 245);
+    margin-bottom: -22px;
+    transform: scale(1.2);
+}
+.social-icons .fa-twitter:hover + .name3{
+    display: flex;
+}
+.content{
+    position: absolute;
+    top: 300px;
+    left: 300px;
+    width: 400px;
+}
+.content h1{
+    text-transform: capitalize;
+    font-size: 40px;
+    font-family: 'Alex Brush', cursive;
+}
+.content p{
+    text-transform: lowercase;
+    font-size: 20px;
+    font-family: 'Arima Madurai', cursive;
+}
+.back{
+    position: absolute;
+    width: 600px;
+    height: 100vh;
+    background-color: rgba(214, 140, 127,0.4);
+    top: 100px;
+    right: 0;
+    border-radius: 10px;
+    z-index: -2;
+}
+img{
+    position: absolute;
+    width: 350px;
+    height: 80vh;
+    right: 100px;
+    top: 100px;
+    box-shadow: 5px 10px 10px black;
+}
+.animate__animated.animate__slideinleft{
+    animation-duration: 0.9s;
+}
+.animate__animated.animate__slideindown{
+    animation-duration: 1s;
+}
+.animate__animated.animate__shakeX{
+    animation-duration: 0.4s;
+}
+#aboutus{
+    position: relative;
+    top: 100vh;
+    margin-left: 50px;
+    text-transform: capitalize;
+}
+.about{
+    position: relative;
+    margin-left: 500px;
+    text-transform: capitalize;
+    font-size: 40px;
+}
+.about::before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -10px;
+    left: 0;
+    transition-duration: 1s;
+    background-color: red;
+    box-shadow: 0px 0px 10px red,
+    0px 0px 20px red,
+    0px 0px 30px red,
+    0px 0px 40px red,
+    0px 0px 60px red,
+    0px 0px 80px red,
+    0px 0px 100px red;
+}
+.about:hover::before{
+    width: 130px;
+}
+#contact{
+    position: relative;
+    top: 180vh;
+}
+#contact h1{
+    position: relative;
+    top: 100vh;
+    margin-left: 500px;
+    text-transform: capitalize;
+    font-size: 40px;
+}
+#contact h1::before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -10px;
+    left: 0;
+    transition-duration: 1s;
+    background-color: red;
+    box-shadow: 0px 0px 10px red,
+    0px 0px 20px red,
+    0px 0px 30px red,
+    0px 0px 40px red,
+    0px 0px 60px red,
+    0px 0px 80px red,
+    0px 0px 100px red;
+}
+#contact h1:hover:before{
+    width: 140px;
+}
+.box{
+    width: 400px;
+    height: 650px;
+    top: 100vh;
+    margin-left: 100px;
+    position: relative;
+    border-radius: 10px;
+    background-color: rgba(240, 59, 59, 0.5);
+}
+.box span{
+    display: flex;
+    text-transform: uppercase;
+    font-size: 27px;
+    position: relative;
+    left: 25px;
+    top: 18vh;
+    font-weight: bold;
+}
+.box-content{
+    position: relative;
+    top: -40vh;
+    left: 80px;
+    font-size: 35px;
+    text-transform: capitalize;
+}
+.box-content span{
+    color: red;
+    font-size: 35px;
+    top: 1vh;
+    left: -3px;
+    z-index: 2;
+}
+.para{
+    position: relative;
+    top: -100px;
+    left: 20px;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+.details{
+    width: 1000px;
+    height: 470px;
+    top: 18vh;
+    margin-left: 350px;
+    position: relative;
+    border-radius: 10px;
+    background-color: rgb(233, 172, 150);
+}
+.details form{
+    position: relative;
+    margin-left: 100px;
+    top: 60px;
+    display: grid;
+}
+.details label{
+    position: relative;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+.details input{
+    width: 300px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+.message{
+    position: relative;
+    top:-330px;
+    margin-left: 380px;
+}
+.message textarea{
+    width: 400px;
+    outline:none;
+    border: none;
+}
+.details input:hover{
+    border: 1px solid rgb(240, 106, 17);
+}
+.message textarea:hover{
+    border: 1px solid rgb(235, 21, 57);
+}
+.send{
+    position: absolute;
+    margin-top: 350px;
+    margin-left: 300px;
+    padding: 10px 30px;
+    background-color:transparent;
+    font-size: 22px;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: black;
+    border: none;
+    outline: none;
+    z-index: 2;
+}
+.send::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    background-color: coral;
+    height: 40px;
+    border-radius: 20px;
+    z-index: -2;
+    transition-duration: 0.4s;
+}
+.send:hover::before{
+    width: 100%;
+}
+#qualifications{
+    position: relative;
+    top: 200vh;
+}
+#qualifications h1{
+    position: relative;
+    text-transform: uppercase;
+    font-size: 30px;
+    left: 500px;
+    z-index: 100;
+}
+#qualifications .study{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    top: 100px;
+    left: 50px;
+}
+.degree{
+    width: auto;
+    height: auto;
+    border:transparent;
+    padding: 20px 0px;
+    box-shadow: 5px 5px 10px black;
+}
+.degree h2{
+    margin-left: 20px;
+    text-transform: capitalize;
+    font-size: 27px;
+}
+.degree p{
+    margin-left: 25px;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+.inter{
+    width: auto;
+    height: auto;
+    border:transparent;
+    padding: 20px 0px;
+    box-shadow: 5px 5px 10px black;
+}
+.inter h2{
+    margin-left: 20px;
+    text-transform: capitalize;
+    font-size: 27px;
+}
+.inter p{
+    margin-left: 25px;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+.school{
+    width: auto;
+    height: auto;
+    border:transparent;
+    padding: 20px 0px;
+    box-shadow: 5px 5px 10px black;
+}
+.school h2{
+    margin-left: 20px;
+    text-transform: capitalize;
+    font-size: 27px;
+}
+.school p{
+    margin-left: 25px;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+#qualifications h1::before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 2px;
+    left: 0;
+    transition-duration: 1s;
+    background-color: red;
+    box-shadow: 0px 0px 10px red,
+    0px 0px 20px red,
+    0px 0px 30px red,
+    0px 0px 40px red,
+    0px 0px 60px red,
+    0px 0px 80px red,
+    0px 0px 100px red;
+}
+#qualifications h1:hover::before{
+    width: 240px;
+}
+#sources{
+    position: relative;
+    top: 100vh;
+}
+#sources h1{
+    position: relative;
+    top: 125vh;
+    left: 500px;
+    font-size: 40px;
+    text-transform: capitalize;
+}
+.web{
+    display: grid;
+    position: relative;
+    top: 130vh;
+    margin-left: 80px;
+    grid-column-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.web .html{
+    width: auto;
+    height: 200px;
+    background-color: rgb(236, 218, 193);
+    border: 1px solid coral;
+}
+.html a{
+    cursor: pointer;
+    text-decoration: none;
+}
+.html a img{
+    width: 70px;
+    height: 70px;
+    position: relative;
+    left: 33%;
+    top: 10px;
+    z-index: 100;
+    border-radius: 50%;
+}
+.html a h2{
+    position: relative;
+    left: 33%;
+    top: 18px;
+    color: black;
+    z-index: 100;
+    text-transform: uppercase;
+}
+.html a p{
+    position: relative;
+    left: 5px;
+    top: 18px;
+    color: black;
+    z-index: 100;
+    text-transform: capitalize;
+    font-size: 2.5vh;
+}
+.web .css{
+    width: auto;
+    height: auto;
+    background-color: rgb(236, 218, 193);
+    border: 1px solid coral;
+}
+.css a img{
+    width: 70px;
+    height: 70px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    left: 33%;
+    top: 10px;
+    z-index: 100;
+    border-radius: 50%;
+}
+.css a{
+    cursor: pointer;
+    text-decoration: none;
+}
+.css a h2{
+    position: relative;
+    left: 33%;
+    top: 18px;
+    color: black;
+    z-index: 100;
+    text-transform: uppercase;
+}
+.css a p{
+    position: relative;
+    left: 5px;
+    top: 18px;
+    color: black;
+    z-index: 100;
+    text-transform: capitalize;
+    font-size: 2.5vh;
+}
+.web .js{
+    width: auto;
+    height: auto;
+    background-color: rgb(236, 218, 193);
+    border: 1px solid coral;
+}
+.js a img{
+    width: 70px;
+    height: 70px;
+    position: relative;
+    left: 33%;
+    top: 10px;
+    z-index: 100;
+    border-radius: 50%;
+}
+.js a{
+    cursor: pointer;
+    text-decoration: none;
+}
+.js a h2{
+    position: relative;
+    left: 32%;
+    top: 18px;
+    color: black;
+    z-index: 100;
+    text-transform: uppercase;
+}
+.js a p{
+    position: relative;
+    left: 5px;
+    top: 18px;
+    color: black;
+    z-index: 100;
+    text-transform: capitalize;
+    font-size: 2.5vh;
+}
+#sources h1::before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 2px;
+    left: 0;
+    transition-duration: 1s;
+    background-color: red;
+    box-shadow: 0px 0px 10px red,
+    0px 0px 20px red,
+    0px 0px 30px red,
+    0px 0px 40px red,
+    0px 0px 60px red,
+    0px 0px 80px red,
+    0px 0px 100px red;
+}
+#sources h1:hover::before{
+    width: 130px;
+}
+#works{
+    position: relative;
+    top: 200vh;
+    display: block
+}
+#works h1{
+    position: relative;
+    top: 160px;
+    left: 600px;
+    font-size: 35px;
+    text-transform: capitalize;
+    z-index: 100;
+}
+.kitchen{
+    position: relative;
+}
+.kitimg img{
+    position: relative;
+    left: 0;
+    top: 300px;
+    left: 200px;
+    width: 300px;
+    height: 300px;
+}
+.overlay{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background:rgba(0,0,0,0.6);
+    border: crimson;
+   top: 300px;
+   left: 200px;
+   opacity: 0;
+   cursor: pointer;
+   z-index: 100;
+}
+.overlay:hover{
+    opacity: 1;
+}
+.kithead{
+    position: absolute;
+    top: 100px;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    color: whitesmoke;
+}
+#history{
+    position: relative;
+}
+.historyimg img{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 1300px;
+    left: 900px;  
+}
+.overlay1{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background:rgba(0,0,0,0.6);
+    border: crimson;
+   top: 1300px;
+   left: 900px;
+   opacity: 0;
+   cursor: pointer;
+   z-index: 100;
+}
+.overlay1:hover{
+   opacity: 1;
+}
+.historyhead{
+    position: absolute;
+    top: 130px;
+    left: 50px;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    color: whitesmoke;
+}
+#works h1::before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 2px;
+    left: 0;
+    transition-duration: 1s;
+    background-color: red;
+    box-shadow: 0px 0px 10px red,
+    0px 0px 20px red,
+    0px 0px 30px red,
+    0px 0px 40px red,
+    0px 0px 60px red,
+    0px 0px 80px red,
+    0px 0px 100px red;
+}
+#works h1:hover::before{
+    width: 160px;
+}
+@media screen and (max-width:1200px){
+    .burger .fa-bars{
+        display: flex;
+        margin-top: -250;
+        float: right;
+        right: 0;
+        position: fixed;
+        cursor: pointer;
+    }
+    header{
+        background-color: transparent;
+        justify-content: center;
+        position: relative;
+        height: 250px;
+    }
+    #menu{
+        position: fixed;
+        text-align: center;
+         display: none;
+         flex-direction: column;
+        cursor: pointer;
+    }
+    #menu a{
+        position: relative;
+        padding: 15px 10px;
+        text-transform: capitalize;
+        text-decoration: none;
+        font-size: 20px;
+        right: 400px;
+        font-family: 'Inconsolata', monospace;
+        color: black;
+    }
+    #menu a::before{
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        bottom: 5px;
+        left: 0;
+        transition-duration: 1s;
+        background-color: red;
+        box-shadow: 0px 0px 10px red,
+        0px 0px 20px red,
+        0px 0px 30px red,
+        0px 0px 40px red,
+        0px 0px 60px red,
+        0px 0px 80px red,
+        0px 0px 100px red;
+    }
+    #menu a:hover::before{
+        width: 100%;
+    }
+    #logo{
+        position: relative;
+        top: 100px;
+        margin-left: 170px;
+        font-size: 75px;
+        text-transform: capitalize;
+        user-select: none;
+        font-family: 'Akaya Telivigala', cursive;
+    }
+    #logo h4{
+        font-size: 30px;
+        position: relative;
+        left: 150px;
+        color: red;
+    }
+    #aboutus{
+        position: relative;
+        top: 100vh;
+        margin-left: 100px;
+        text-transform: capitalize;
+    }
+    .about{
+        position: relative;
+        margin-left: 180px;
+        text-transform: capitalize;
+        font-size: 40px;
+    }
+    .content{
+        position: absolute;
+        top: 100px;
+        left:0px;
+        width: 200px;
+    }
+    .content h1{
+        text-transform: capitalize;
+        font-size: 30px;
+        margin-left: 0;
+        font-family: 'Alex Brush', cursive;
+    }
+    .content p{
+        text-transform: lowercase;
+        font-size: 20px;
+        margin-left: 0px;
+        font-family: 'Arima Madurai', cursive;
+    }
+    .back{
+        position: absolute;
+        width: 350px;
+        height: 60vh;
+        background-color: rgba(214, 140, 127,0.4);
+        top: 350px;
+        right: 0;
+        border-radius: 10px;
+        z-index: -2;
+    }
+    img{
+        position: absolute;
+        width: 300px;
+        height: 50vh;
+        right: 0px;
+        top: 350px;
+        box-shadow: 5px 10px 10px black;
+    }
+    #contact{
+        position: relative;
+        top: 160vh;
+    }
+    #contact h1{
+        position: relative;
+        top: 105vh;
+        margin-left: 250px;
+        text-transform: capitalize;
+        font-size: 40px;
+    }
+    #contact h1::before{
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        bottom: -10px;
+        left: 0;
+        transition-duration: 1s;
+        background-color: red;
+        box-shadow: 0px 0px 10px red,
+        0px 0px 20px red,
+        0px 0px 30px red,
+        0px 0px 40px red,
+        0px 0px 60px red,
+        0px 0px 80px red,
+        0px 0px 100px red;
+    }
+    #contact h1:hover:before{
+        width: 140px;
+    }
+    .box{
+        width: 890px;
+        height: 720px;
+        top: 100vh;
+        margin-left: 50px;
+        position: relative;
+        border-radius: 10px;
+        z-index: -2;
+        background-color: rgba(240, 59, 59, 0.5);
+    }
+    .box span{
+        display: flex;
+        text-transform: uppercase;
+        font-size: 27px;
+        position: relative;
+        left: 25px;
+        top: 10vh;
+        font-weight: bold;
+    }
+    .box-content{
+        position: relative;
+        top: -300px;
+        left: 80px;
+        font-size: 35px;
+        text-transform: capitalize;
+    }
+    .box-content span{
+        color: red;
+        font-size: 35px;
+        top: 1vh;
+        left: -3px;
+        z-index: 2;
+    }
+    .para{
+        position: relative;
+        top: -160px;
+        left: 80px;
+        text-transform: capitalize;
+        font-size: 20px;
+    }
+    .details{
+        width: 780px;
+        height: 800px;
+        top: 90vh;
+        margin-left: 100px;
+        position: relative;
+        border-radius: 10px;
+        z-index: -2;
+        background-color: rgb(233, 172, 150);
+    }
+    .details form{
+        position: relative;
+        margin-left: 50px;
+        top: 60px;
+        display: grid;
+    }
+    .details label{
+        position: relative;
+        text-transform: capitalize;
+        font-size: 20px;
+    }
+    .details input{
+        width: 350px;
+        padding: 10px 10px;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+    }
+    .message{
+        position: relative;
+        top:30px;
+        margin-left: 0px;
+    }
+    .message textarea{
+        width: 400px;
+        outline:none;
+        border: none;
+        border-radius: 10px;
+    }
+    .details input:hover{
+        border: 1px solid rgb(240, 106, 17);
+    }
+    .message textarea:hover{
+        border: 1px solid rgb(235, 21, 57);
+    }
+    .send{
+        position: absolute;
+        margin-top: 107vh;
+        margin-left: 150px;
+        padding: 10px 30px;
+        background-color:transparent;
+        font-size: 22px;
+        text-transform: capitalize;
+        font-weight: bold;
+        color: black;
+        border: none;
+        outline: none;
+        z-index: 2;
+    }
+    .send::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        background-color: coral;
+        height: 40px;
+        border-radius: 20px;
+        z-index: -2;
+        transition-duration: 0.4s;
+    }
+    .send:hover::before{
+        width: 100%;
+    }
+    #qualifications{
+        position: relative;
+        top: 200vh;
+    }
+    #qualifications h1{
+        position: relative;
+        text-transform: uppercase;
+        font-size: 30px;
+        left: 200px;
+    }
+    #sources h1{
+        position: relative;
+        left: 50%;
+    }
+    .web{
+        display: grid;
+        position: relative;
+        top: 130vh;
+        margin-left:40px;
+        grid-column-gap: 20px;
+        grid-row-gap: 30px;
+        grid-template-columns: 1fr 1fr;
+    }
+    .web .html{
+        width: auto;
+        height: 290px;
+        background-color: rgb(236, 218, 193);
+        border: 1px solid coral;
+    }
+    .web .css{
+        width: auto;
+        height: 290px;
+        background-color: rgb(236, 218, 193);
+        border: 1px solid coral;
+    }
+    .web .js{
+        width: auto;
+        height: 290px;
+        background-color: rgb(236, 218, 193);
+        border: 1px solid coral;
+    }
+    #works{
+        position: relative;
+        top: 220vh;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    #works h1{
+        position: relative;
+        top: 160px;
+        left: 330px;
+        font-size: 35px;
+        text-transform: capitalize;
+        z-index: 100;
+    }
+    .kitchen{
+        position: relative;
+    }
+    .kitimg img{
+        position: relative;
+        top: 200px;
+        left: 100px;
+        width: 250px;
+        height: 250px;
+    }
+    .overlay{
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        background:rgba(0,0,0,0.6);
+        border: crimson;
+       top: 200px;
+       left: 100px;
+       opacity: 0;
+       cursor: pointer;
+       z-index: 100;
+    }
+    .overlay:hover{
+        opacity: 1;
+    }
+    .kithead{
+        position: absolute;
+        top: 100px;
+        font-size: 33px;
+        text-transform: uppercase;
+        text-align: center;
+        color: whitesmoke;
+    }
+    #history{
+        position: relative;
+    }
+    .historyimg img{
+        width: 250px;
+        height: 250px;
+        position: absolute;
+        top: 1390px;
+        left: 400px;  
+    }
+    .overlay1{
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        background:rgba(0,0,0,0.6);
+        border: crimson;
+       top: 1390px;
+       left: 400px;
+       opacity: 0;
+       cursor: pointer;
+       z-index: 100;
+    }
+    .overlay1:hover{
+       opacity: 1;
+    }
+    .historyhead{
+        position: absolute;
+        top: 110px;
+        left: 50px;
+        font-size: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        color: whitesmoke;
+    }
+    #works h1::before{
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        bottom: 2px;
+        left: 0;
+        transition-duration: 1s;
+        background-color: red;
+        box-shadow: 0px 0px 10px red,
+        0px 0px 20px red,
+        0px 0px 30px red,
+        0px 0px 40px red,
+        0px 0px 60px red,
+        0px 0px 80px red,
+        0px 0px 100px red;
+    }
+    #works h1:hover::before{
+        width: 160px;
+    }
+}
+@media screen and (max-width:500px){
+    body{
+        overflow-x: hidden;
+    }
+    .burger .fa-bars{
+        display: flex;
+        margin-top: -250;
+        float: right;
+        right: 0;
+        position: fixed;
+        cursor: pointer;
+    }
+    header{
+        background-color: transparent;
+        justify-content: center;
+        position: relative;
+        height: 250px;
+    }
+    #menu{
+        position: fixed;
+        text-align: center;
+         display: none;
+         flex-direction: column;
+        cursor: pointer;
+    }
+    #menu a{
+        position: relative;
+        padding: 15px 10px;
+        text-transform: capitalize;
+        text-decoration: none;
+        font-size: 20px;
+        left: -150px;
+        font-family: 'Inconsolata', monospace;
+        color: black;
+    }
+    #menu a::before{
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        bottom: 5px;
+        left: 0;
+        transition-duration: 1s;
+        background-color: red;
+        box-shadow: 0px 0px 10px red,
+        0px 0px 20px red,
+        0px 0px 30px red,
+        0px 0px 40px red,
+        0px 0px 60px red,
+        0px 0px 80px red,
+        0px 0px 100px red;
+    }
+    #menu a:hover::before{
+        width: 100%;
+    }
+    #logo{
+        position: relative;
+        top: 100px;
+        margin-left: 150px;
+        font-size: 50px;
+        text-transform: capitalize;
+        user-select: none;
+        font-family: 'Akaya Telivigala', cursive;
+    }
+    #logo h4{
+        font-size: 20px;
+        position: relative;
+        left: 150px;
+        color: red;
+    }
+    #aboutus{
+        position: relative;
+        top: 100vh;
+        margin-left: 100px;
+        text-transform: capitalize;
+    }
+    .about{
+        position: relative;
+        margin-left: 100px;
+        text-transform: capitalize;
+        font-size: 30px;
+    }
+    .content{
+        position: absolute;
+        top: 100px;
+        left: 300px;
+        width: 30px;
+    }
+    .content h1{
+        text-transform: capitalize;
+        font-size: 30px;
+        margin-left: -300px;
+        font-family: 'Alex Brush', cursive;
+    }
+    .content p{
+        text-transform: lowercase;
+        font-size: 20px;
+        margin-left: -300px;
+        font-family: 'Arima Madurai', cursive;
+    }
+    .back{
+        position: absolute;
+        width: 350px;
+        height: 60vh;
+        background-color: rgba(214, 140, 127,0.4);
+        top: 350px;
+        right: 0;
+        border-radius: 10px;
+        z-index: -2;
+    }
+    img{
+        position: absolute;
+        width: 300px;
+        height: 50vh;
+        right: 0px;
+        top: 350px;
+        box-shadow: 5px 10px 10px black;
+    }
+    #contact{
+        position: relative;
+        top: 160vh;
+    }
+    #contact h1{
+        position: relative;
+        top: 100vh;
+        margin-left: 150px;
+        text-transform: capitalize;
+        font-size: 40px;
+    }
+    #contact h1::before{
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        bottom: -10px;
+        left: 0;
+        transition-duration: 1s;
+        background-color: red;
+        box-shadow: 0px 0px 10px red,
+        0px 0px 20px red,
+        0px 0px 30px red,
+        0px 0px 40px red,
+        0px 0px 60px red,
+        0px 0px 80px red,
+        0px 0px 100px red;
+    }
+    #contact h1:hover:before{
+        width: 140px;
+    }
+    .box{
+        width: 400px;
+        height: 720px;
+        top: 100vh;
+        margin-left: 50px;
+        position: relative;
+        border-radius: 10px;
+        z-index: -2;
+        background-color: rgba(240, 59, 59, 0.5);
+    }
+    .box span{
+        display: flex;
+        text-transform: uppercase;
+        font-size: 27px;
+        position: relative;
+        left: 25px;
+        top: 10vh;
+        font-weight: bold;
+    }
+    .box-content{
+        position: relative;
+        top: -200px;
+        left: 80px;
+        font-size: 35px;
+        text-transform: capitalize;
+    }
+    .box-content span{
+        color: red;
+        font-size: 35px;
+        top: 1vh;
+        left: -3px;
+        z-index: 2;
+    }
+    .para{
+        position: relative;
+        top: -160px;
+        left: 20px;
+        text-transform: capitalize;
+        font-size: 20px;
+    }
+    .details{
+        width: 400px;
+        height: 800px;
+        top: 95vh;
+        margin-left: 100px;
+        position: relative;
+        border-radius: 10px;
+        z-index: -2;
+        background-color: rgb(233, 172, 150);
+    }
+    .details form{
+        position: relative;
+        margin-left: 50px;
+        top: 60px;
+        display: grid;
+    }
+    .details label{
+        position: relative;
+        text-transform: capitalize;
+        font-size: 20px;
+    }
+    .details input{
+        width: 250px;
+        padding: 10px 10px;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+    }
+    .message{
+        position: relative;
+        top:30px;
+        margin-left: 0px;
+    }
+    .message textarea{
+        width: 300px;
+        outline:none;
+        border: none;
+        border-radius: 10px;
+    }
+    .details input:hover{
+        border: 1px solid rgb(240, 106, 17);
+    }
+    .message textarea:hover{
+        border: 1px solid rgb(235, 21, 57);
+    }
+    .send{
+        position: absolute;
+        margin-top: 107vh;
+        margin-left: 100px;
+        padding: 10px 30px;
+        background-color:transparent;
+        font-size: 22px;
+        text-transform: capitalize;
+        font-weight: bold;
+        color: black;
+        border: none;
+        outline: none;
+        z-index: 2;
+    }
+    .send::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        background-color: coral;
+        height: 40px;
+        border-radius: 20px;
+        z-index: -2;
+        transition-duration: 0.4s;
+    }
+    .send:hover::before{
+        width: 100%;
+    }
+    #qualifications{
+        position: relative;
+        top: 200vh;
+    }
+    #qualifications h1{
+        position: relative;
+        text-transform: uppercase;
+        font-size: 30px;
+        left: 200px;
+    }
+    #sources h1{
+        position: relative;
+        left: 40%;
+    }
+    .web{
+        display: grid;
+        position: relative;
+        top: 130vh;
+        margin-left:40px;
+        grid-column-gap: 20px;
+        grid-row-gap: 30px;
+        grid-template-columns: 1fr;
+    }
+    .web .html{
+        width: auto;
+        height: 200px;
+        background-color: rgb(236, 218, 193);
+        border: 1px solid coral;
+    }
+    .html a{
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .html a img{
+        width: 70px;
+        height: 70px;
+        position: relative;
+        left: 40%;
+        top: 10px;
+        z-index: 100;
+        border-radius: 50%;
+    }
+    .html a h2{
+        position: relative;
+        left: 39%;
+    }
+    .web .css{
+        width: auto;
+        height: 200px;
+        background-color: rgb(236, 218, 193);
+        border: 1px solid coral;
+    }
+    .css a{
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .css a img{
+        width: 70px;
+        height: 70px;
+        position: relative;
+        left: 40%;
+        top: 10px;
+        z-index: 100;
+        border-radius: 50%;
+    }
+    .css a h2{
+        position: relative;
+        left: 39%;
+    }
+    .web .js{
+        width: auto;
+        height: 200px;
+        background-color: rgb(236, 218, 193);
+        border: 1px solid coral;
+    }
+    .js a{
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .js a img{
+        width: 70px;
+        height: 70px;
+        position: relative;
+        left: 40%;
+        top: 10px;
+        z-index: 100;
+        border-radius: 50%;
+    }
+    .js a h2{
+        position: relative;
+        left: 39%;
+    }
+    #works{
+        position: relative;
+        top: 260vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #works h1{
+        position: relative;
+        top: -200px;
+        left: 200px;
+        font-size: 35px;
+        text-transform: capitalize;
+        z-index: 100;
+    }
+    .kitchen{
+        position: relative;
+    }
+    .kitimg img{
+        position: relative;
+        top: -120px;
+        left: -200px;
+        width: 200px;
+        height: 200px;
+    }
+    .overlay{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background:rgba(0,0,0,0.6);
+        border: crimson;
+       top: -120px;
+       left: -200px;
+       opacity: 0;
+       cursor: pointer;
+       z-index: 100;
+    }
+    .overlay:hover{
+        opacity: 1;
+    }
+    .kithead{
+        position: absolute;
+        top: 70px;
+        font-size: 25px;
+        text-transform: uppercase;
+        text-align: center;
+        color: whitesmoke;
+    }
+    #history{
+        position: relative;
+    }
+    .historyimg img{
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: 1385px;
+        left: 280px;  
+    }
+    .overlay1{
+        position: absolute;
+        width: 250px;
+        height: 200px;
+        background:rgba(0,0,0,0.6);
+        border: crimson;
+       top: 1385px;
+       left: 280px;
+       opacity: 0;
+       cursor: pointer;
+       z-index: 100;
+    }
+    .overlay1:hover{
+       opacity: 1;
+    }
+    .historyhead{
+        position: absolute;
+        top: 90px;
+        left: 50px;
+        font-size: 27px;
+        text-transform: uppercase;
+        text-align: center;
+        color: whitesmoke;
+    }
+}
